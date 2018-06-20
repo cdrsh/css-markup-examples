@@ -1,0 +1,195 @@
+@import '../globals/globals';
+
+/*Анимация плавного появления*/
+@keyframes menuanim
+{
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+/* XS and SM */
+@media (max-width: 767.98px)  
+{
+
+	@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+		/*.menu-nosel - js class to disable focus, just dropdown*/
+		.active-$(nam) {
+			color:$(bg-$nam) !important;
+			background-color:$(clr-$nam) !important;
+		}
+
+		.menu-$nam .icn1,
+		.menu-$nam .icn2,
+		.menu-$nam .icn3 {
+			margin-right: $mar-lr;
+		}
+
+		.menu-$nam {
+			display:flex;
+			flex-direction: column;
+			background-color:$(bg-$nam);
+		}
+		
+		.menu-$nam span {
+			position:relative;
+		}
+
+		.menu-$nam .menu-$nam{
+			display:none;
+		}
+
+		.menu-$nam a {
+			text-decoration: none;
+			padding:5px;
+		
+			color:$(clr-$nam);
+			background-color:$(bg-$nam);
+			display: flex;
+			font-family: $fnt-ctrl;
+			border: 1px solid transparent;
+			white-space: nowrap;
+			border-bottom: 1px $brd-active-stl $(clr-$nam);
+		}
+		
+		.menu-$nam a:after {
+			content:'';
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+		}
+
+		.menu-$nam a:hover:after {
+			background-color:$(clr-$nam);
+			opacity:0.25;
+			border-color: transparent;
+		}
+
+		.menu-$nam>span>span {
+			display: flex;
+			flex-direction: column;
+			overflow-x:hidden;
+		}
+
+		.menu-$nam>span>span {
+			border:$brd-w $brd-stl $(clr-$nam);
+			padding: 1px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MD and larger */
+@media (min-width: 768px)
+{
+	@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+
+		.active-$(nam) {
+			border-bottom: $brd-active-w $brd-active-stl $(clr-$nam);
+		}
+
+		.menu-$nam .icn1,
+		.menu-$nam .icn2,
+		.menu-$nam .icn3 {
+			margin-right: $mar-lr;
+		}
+		
+		.menu-$nam {
+			display:flex;
+			flex-direction: row;
+		}
+		
+		.menu-$nam span {
+			border: 1px solid transparent;
+		}
+
+		.menu-$nam a {
+			margin-right: 5px;
+			text-decoration: none;
+			padding:5px;
+		
+			color:$(clr-$nam);
+			display: flex;
+			font-family: $fnt-ctrl;
+		}
+		
+		/*Ссылка по размерам родителя*/
+		.menu-$nam a:after {
+			content:'';
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+		}
+		
+		.menu-$nam a:hover:after {
+			background-color:$(clr-$nam);
+			opacity:0.25;
+			border-color: transparent;
+		}
+			
+		.menu-$nam span:hover {
+			cursor: pointer;
+			background-color:$(bg-$nam);
+			border:$brd-w $brd-stl $(clr-$nam);
+		}
+		
+		.menu-$nam span:hover>a {
+			color:$(clr-$nam);
+			border-color: transparent;
+		}
+		
+		.menu-$nam>span>span {
+			display: none;
+		}
+		
+		.menu-$nam>span {
+			position: relative;
+			padding: 5px;
+		}
+		
+		span .menu-$nam>span {
+			position: relative;
+		}
+		
+		.menu-$nam>span:hover>span {
+			display: inline-flex;
+			position: absolute;
+			top:100%;
+			left:0;
+			flex-direction: column;
+		
+			background-color:$(bg-$nam);
+			border:$brd-w $brd-stl $(clr-$nam);
+		
+			animation: menuanim  0.3s ease;
+			animation-fill-mode: both;
+		}
+		
+		.menu-$nam .menu-$nam>span:hover>span {
+			top:0;
+			left:100%;
+		
+			background-color:$(bg-$nam);
+			border:$brd-w $brd-stl $(clr-$nam);
+		}
+		
+		.menu-$nam>span:hover>span>span>a {
+			display: inline-block;
+			white-space: nowrap;
+		}
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+
+    .card-$(nam) {
+        max-width: 300px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.75);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        margin: 5px;
+        padding:0px;
+        padding:0px 0px 15px 0px;
+        flex-wrap: wrap;
+    }
+
+    .card-$(nam)>img {
+        max-width: 298px;
+        height: 150px;
+        width: auto;
+    }
+
+    .card-$(nam)>.title {
+        padding: 5px 5px 5px 5px;
+        font-size: 20px;
+        color:$(clr-$(nam));
+    }
+
+    .card-$(nam)>button {
+        border: 0px;
+        border-radius: 5px;
+        font-size: 13pt;
+        padding: 5px;
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 10%, rgba($(bg-$(nam)),0) 30%, rgba($(bg-$(nam)),0.6) 90%);
+        background-color:$(clr-$(nam));
+        color:$(bg-$(nam));
+        cursor: pointer;
+    }
+
+    .card-$(nam)>button:hover {
+        background: none;
+        background-color:$(clr-$(nam));
+    }
+
+    .card-$(nam)>.descr {
+        padding: 5px 5px 5px 5px;
+        color:$(clr-$(nam));
+    }
+
+}
+

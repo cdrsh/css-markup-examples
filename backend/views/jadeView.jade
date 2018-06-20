@@ -1,0 +1,10 @@
+div
+  h1 Header Jade works
+  
+
+  //p #{users}
+  input(type="text" name="_csrf" value= users[0].email)
+
+  ul
+    each itm in users
+      li #{itm.id}

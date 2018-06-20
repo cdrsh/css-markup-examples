@@ -1,0 +1,58 @@
+<head>
+    <meta charset="utf-8">
+    <title>Counters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css" charset="utf-8" />
+</head>
+
+<body>
+    <h2 class="h2">Counters</h2>
+    <hr>
+    <div class="cntr2">
+        <div>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+        </div>
+        <div class="lbls">
+            Label
+        </div>
+    </div>
+
+    <div class="cntr1" id="tmr1">
+        <div>
+            <div class="nmbrs">
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="lbls">
+                Hours
+            </div>
+        </div>
+        <span class="sprt">:</span>
+        <div>
+            <div class="nmbrs">
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="lbls">
+                Minutes
+            </div>
+        </div>
+        <span class="sprt">:</span>
+        <div>
+            <div class="nmbrs">
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="lbls">
+                Seconds
+            </div>
+        </div>
+    </div>
+    <button onClick="document.tmrObj.onTimerStart('tmr1')">Set Counter</button>
+</body>

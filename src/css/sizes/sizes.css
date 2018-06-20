@@ -1,0 +1,9 @@
+@import '../globals/globals';
+.sz-xs {
+    font-size:$sz-xs;
+}
+
+.sz-lg {
+    font-size:$sz-lg;
+}
+

@@ -1,0 +1,38 @@
+{
+	"name": "css-markup-examples",
+	"version": "0.0.1",
+	"description": "css markup examples with pure-js",
+	"author": "cdrsh <vuepress@zoho.eu>",
+	"scripts": {
+		"inst": "npm install && cd backend && npm install",
+		"dev": "gulp",
+		"update": "ncu -a; npm i"
+	},
+	"author": "cdrsh",
+	"license": "MIT",
+	"dependencies": {
+		"autoprefixer": "^8.5.1",
+		"cssnano": "^3.10.0",
+		"gulp": "^3.9.1",
+		"gulp-postcss": "7.0.1",
+		"gulp-sass": "4.0.1",
+		"gulp-shell": "^0.6.5",
+		"gulp-uncss": "^1.0.6",
+		"node-sass": "^4.9.0",
+		"postcss": "^6.0.22",
+		"postcss-advanced-variables": "^2.3.3",
+		"postcss-at-rules-variables": "^0.1.5",
+		"postcss-calc": "^6.0.1",
+		"postcss-cssnext": "^3.1.0",
+		"postcss-discard-comments": "^2.0.4",
+		"postcss-each": "^0.10.0",
+		"postcss-extend": "^1.0.5",
+		"postcss-for": "^2.1.1",
+		"postcss-hexrgba": "^1.0.1",
+		"postcss-import": "^11.1.0",
+		"postcss-safe-parser": "^3.0.1",
+		"postcss-simple-vars": "^4.1.0",
+		"postcss-strip-inline-comments": "^0.1.5",
+		"postcss-uncss": "^0.16.1"
+	}
+}

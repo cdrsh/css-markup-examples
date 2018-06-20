@@ -1,0 +1,352 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+    /*gradient borders*/
+    /*up to down*/
+    .brd-grad-ud-$(nam) {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: linear-gradient(to bottom, rgba($(clr-$(nam)),0.1) 0%, rgba($(clr-$(nam)),0.5) 100%);
+        border-image-slice: 1;
+        margin: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    /*down to up*/
+    .brd-grad-du-$(nam) {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: linear-gradient(to top, rgba($(clr-$(nam)),0.1) 0%, rgba($(clr-$(nam)),0.5) 100%);
+        border-image-slice: 1;
+        margin: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    /*left to right*/
+    .brd-grad-lr-$(nam) {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: linear-gradient(to right, rgba($(clr-$(nam)),0.1) 0%, rgba($(clr-$(nam)),0.5) 100%);
+        border-image-slice: 1;
+        margin: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    /*right to left*/
+    .brd-grad-rl-$(nam) {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: linear-gradient(to left, rgba($(clr-$(nam)),0.1) 0%, rgba($(clr-$(nam)),0.5) 100%);
+        border-image-slice: 1;
+        margin: 0px;
+        display: block;
+        text-align: center;
+    }
+
+
+
+
+
+    /*Photoborder*/
+    .brd-photo-$(nam) {
+        -webkit-box-shadow:
+        0px 0px 0px 2px rgba($(clr-$(nam)),0.6),
+        0px 0px 0px 14px $(bg-$(nam)),
+        0px 0px 0px 18px rgba($(clr-$(nam)),0.2),
+        6px 6px 8px 17px $(clr-$(nam));
+    
+        -moz-box-shadow:
+        0px 0px 0px 2px rgba($(clr-$(nam)),0.6),
+        0px 0px 0px 14px $(bg-$(nam)),
+        0px 0px 0px 18px rgba($(clr-$(nam)),0.2),
+        6px 6px 8px 17px $(clr-$(nam));
+    
+        box-shadow:
+        0px 0px 0px 2px rgba($(clr-$(nam)),0.6),
+        0px 0px 0px 14px $(bg-$(nam)),
+        0px 0px 0px 18px rgba($(clr-$(nam)),0.2),
+        6px 6px 8px 17px $(clr-$(nam));
+    
+        margin: 20px;
+    }
+
+
+
+    
+
+    /*Photoborder 2*/
+    .brd-photo-2-$(nam) {
+        position: relative;
+        width: 220px;
+        margin: 5px;
+    }
+    .brd-photo-2-$(nam) img {
+        border: 10px solid $(bg-$(nam));
+        border-bottom: 45px solid $(bg-$(nam));
+        -webkit-box-shadow: 3px 3px 3px $(clr-$(nam));
+        -moz-box-shadow: 3px 3px 3px $(clr-$(nam));
+        box-shadow: 3px 3px 3px $(clr-$(nam));
+    }
+    .brd-photo-2-$(nam) p {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        bottom: 0px;
+        padding-bottom: 5px;
+        color: $(clr-$(nam));
+    } 
+    
+
+
+
+    /*Opacity border*/
+    .brd-opacity-$(nam) {
+        border: 50px solid rgba($(clr-$(nam)), 0.7);
+        background: url('https://well.ru/upload/uf/3d3/1.jpg') no-repeat center $(clr-$(nam));
+        width: 700px;
+        height: 500px;
+        margin-right: -10px;
+    }
+
+
+
+
+
+    /*Radial inner*/
+    .brd-radial-inner-$(nam) {
+        display: inline-block;
+        padding: 25px;
+        margin: 5px;
+        color: $(bg-$(nam));
+        background: radial-gradient(circle at top left, transparent 15px, $(clr-$(nam)) 0) top left,
+        radial-gradient(circle at top right, transparent 15px, $(clr-$(nam)) 0) top right,
+        radial-gradient(circle at bottom right, transparent 15px, $(clr-$(nam)) 0) bottom right,
+        radial-gradient(circle at bottom left, transparent 15px, $(clr-$(nam)) 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    .brd-radial-inner-$(nam)>span {
+        display: inline;
+    }
+    
+
+
+
+    /*Brd outer inner*/
+    .brd-outer-$(nam) {
+        display: inline-block;
+        position: relative;
+        border: 10px solid $(clr-$(nam));
+        padding: 10px;
+        margin: 10px;
+    }
+    .brd-inner-$(nam) {
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        border: 10px solid $(clr-$(nam));
+    }
+    .brd-outer-$(nam):before, 
+    .brd-outer-$(nam):after, 
+    .brd-inner-$(nam):before, 
+    .brd-inner-$(nam):after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: $(bg-$(nam));
+        background-image: linear-gradient(90deg, $(clr-$(nam)) 33%, rgba(255,255,255,0) 33%, rgba(255,255,255,0) 66%, $(clr-$(nam)) 66%, $(clr-$(nam))),
+        linear-gradient(90deg, $(clr-$(nam)) 33%, rgba(255,255,255,0) 33%, rgba(255,255,255,0) 66%, $(clr-$(nam)) 66%, $(clr-$(nam)));
+        background-repeat: no-repeat;
+        background-size: 30px 10px;
+        background-position: 0 0, 0 20px;
+    }
+    .brd-outer-$(nam):before {
+        left: -10px;
+        top: -10px;
+        z-index: 3;
+    }
+    .brd-outer-$(nam):after {
+        right: -10px;
+        top: -10px;
+        z-index: 3;
+        background-position: 10px 0, 10px 20px;
+    }
+    .brd-inner-$(nam):before {
+        left: -30px;
+        bottom: -30px;
+        background-position: 0 10px, 0px 30px;
+    }
+    .brd-inner-$(nam):after {
+        right: -30px;
+        bottom: -30px;
+        background-position: 10px 10px, 10px 30px;
+    }
+    .brd-inner-$(nam) p {
+        font-size: 18px; 
+        color: $(clr-$(nam)); 
+    }
+
+
+
+
+    /*Border width gradient*/
+    .brd-grad-outer-$(nam) {
+        display: inline-block;
+        margin: 15px;
+        padding: 15px;
+    }    
+    .brd-grad-outer-$(nam)>span {
+        display: inline;
+        padding: 15px;
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+        box-shadow: 0 0 10px 5px;
+        text-shadow: 0 0 5px;
+        border-radius: 5px;
+        font-size: 16pt;
+    }
+    
+ 
+    
+
+
+
+
+    /*Message upped border*/
+    .brd-msgup-$(nam) {
+        position:relative;
+        width:40%;
+        padding:1em;
+        margin:2em 10px 4em;
+        background:$(bg-$(nam));
+        -webkit-box-shadow:0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+        box-shadow:0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+        -webkit-box-shadow: 0 15px 10px -10px rgba($(clr-$(nam)), 0.5), 0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+        -moz-box-shadow: 0 15px 10px -10px rgba($(clr-$(nam)), 0.5), 0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+        box-shadow: 0 15px 10px -10px rgba($(clr-$(nam)), 0.5), 0 1px 4px rgba($(clr-$(nam)), 0.3), 0 0 40px rgba($(clr-$(nam)), 0.1) inset;
+    }
+    .brd-msgup-$(nam):before,
+    .brd-msgup-$(nam):after {
+        content:"";
+        position:absolute;
+        z-index:-2;
+    }
+    .brd-msgup-$(nam) p {
+        font-size:16px;
+        font-weight:bold;
+    }
+
+
+
+
+
+    /*Photo border*/
+    .brd-cool-$(nam) {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba($(clr-$(nam)), 0.2);
+        box-shadow: 0px 1px 4px rgba($(clr-$(nam)), 0.15);
+    }
+
+    
+}
+
+
+
+
+
+
+/*Photoborder gray*/
+.brd-photo {
+    -webkit-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+
+    -moz-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+
+    box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+
+    margin: 20px;
+} 
+
+
+
+/*Photoborder 2 gray*/
+.brd-photo-2 {
+    position: relative;
+    width: 220px;
+    margin: 5px;
+}
+.brd-photo-2 img {
+    border: 10px solid #fff;
+    border-bottom: 45px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+}
+.brd-photo-2 p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    padding-bottom: 5px;
+     color: #888;
+}
+
+
+
+
+
+/*Opacity border gray*/
+.brd-opacity {
+    border: 50px solid rgba(#CCC, 0.7);
+    background: url('https://well.ru/upload/uf/3d3/1.jpg') no-repeat center #CCC;
+	width: 700px;
+    height: 500px;
+    margin-right: -10px;
+}
+
+
+
+/*Rainbow*/
+.brd-rainbow{
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px #ff4f00,
+        0 0 0 7px #ffdb00,
+        0 0 0 10px #00ffa2;
+    padding: 10px 20px 10px 20px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+
+
+
+.brd-rainbow-round {
+	border-radius: 50%/50%;
+	box-shadow: 0 0 0 3px #ff4f00,
+				0 0 0 7px #ffdb00,
+				0 0 0 10px #00ffa2;
+	padding: 30px;
+	margin: 20px auto;
+	width: 130px;
+	height: 130px;
+	text-align: center;
+}

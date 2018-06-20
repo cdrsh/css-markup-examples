@@ -1,0 +1,263 @@
+@import '../globals/globals';
+
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+
+	/*Sidebar left*/
+	.sdbrl-$(nam) {
+		position: relative;
+	}
+	.sdbrl-$(nam) .mbtn {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+		padding: 5px 15px 5px 15px;
+		border-radius: $brd-rad;
+		display: inline-block;
+	}
+	.sdbrl-$(nam) .btn {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(clr-$nam);
+		background-color: $(bg-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		padding: $pad-ctrl;
+	}
+	.sdbrl-$(nam) .btn:hover {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(bg-$nam);
+		background-color: $(clr-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		padding: $pad-ctrl;
+		cursor: pointer;
+	}
+	.sdbrl-$(nam) .btn:last-child {
+		border-bottom: 0px;
+	}
+	.sdbrl-$(nam) .mbtn:hover {
+		opacity: 0.9;
+	}
+	.sdbrl-$(nam) .mcnt {
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		cursor: pointer;
+		display:flex;
+		flex-direction: column;	
+		border-right: 1px solid $(clr-$nam);
+		position: absolute;
+	}
+	.sdbrl-$(nam) .hdr {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.sdbrl-$(nam) .hdr .h2 {
+		flex-grow: 1;
+		color:$(clr-$nam);
+		font-size: 20pt;
+		font-family: $fnt-txt;
+		display: inline;
+		padding: 0px 15px 0px 15px;
+	}
+	.sdbrl-$(nam) .hdr .mcls {
+		width: 30px;
+		text-align: center;
+		font-family: $fnt-txt;
+		font-size: 20pt;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+		font-family: 'FontAwesome';
+	}
+	.sdbrl-$(nam) .hdr .mcls:hover {
+		opacity: 0.9;
+	}
+	.sdbrl-$(nam) .bdy {
+		font-size: $fsz-ctrl;
+		font-family: $fnt-txt;
+		border-top: 1px solid $(clr-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		display: flex;
+		flex-direction: column;
+	}
+	.sdbrl-$(nam) #modal-toggle-l {
+		display: none;
+	}
+	.sdbrl-$(nam) #modal-toggle-l.active ~ .mbdrp,
+	.sdbrl-$(nam) #modal-toggle-l:checked ~ .mbdrp {
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 9;
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.2s ease-in;
+	}
+	.sdbrl-$(nam) #modal-toggle-l.active ~ .mcnt,
+	.sdbrl-$(nam) #modal-toggle-l:checked ~ .mcnt {
+		opacity: 1;
+		background-color: $(bg-$nam);
+		color: $(clr-$nam);
+		position: fixed;
+		left:0;
+		top: 0;
+		width:30%;
+		height:100%;
+		margin-left: 0px;
+		margin-right: 5px;
+		z-index: 998;
+		pointer-events: auto;
+		cursor: auto;
+		visibility: visible;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+		overflow: hidden;
+	}
+
+
+
+
+
+
+
+	/*Sidebar left*/
+	.sdbrr-$(nam) {
+		position: relative;
+	}
+	.sdbrr-$(nam) .mbtn {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+		padding: 5px 15px 5px 15px;
+		border-radius: $brd-rad;
+		display: inline-block;
+	}
+	.sdbrr-$(nam) .btn {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(clr-$nam);
+		background-color: $(bg-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		padding: $pad-ctrl;
+	}
+	.sdbrr-$(nam) .btn:hover {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(bg-$nam);
+		background-color: $(clr-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		padding: $pad-ctrl;
+		cursor: pointer;
+	}
+	.sdbrr-$(nam) .btn:last-child {
+		border-bottom: 0px;
+	}
+	.sdbrr-$(nam) .mbtn:hover {
+		opacity: 0.9;
+	}
+	.sdbrr-$(nam) .mcnt {
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		cursor: pointer;
+		display:flex;
+		flex-direction: column;	
+		border-right: 1px solid $(clr-$nam);
+		position: absolute;
+	}
+	.sdbrr-$(nam) .hdr {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.sdbrr-$(nam) .hdr .h2 {
+		flex-grow: 1;
+		color:$(clr-$nam);
+		font-size: 20pt;
+		font-family: $fnt-txt;
+		display: inline;
+		padding: 0px 15px 0px 15px;
+	}
+	.sdbrr-$(nam) .hdr .mcls {
+		width: 30px;
+		text-align: center;
+		font-family: $fnt-txt;
+		font-size: 20pt;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+		font-family: 'FontAwesome';
+	}
+	.sdbrr-$(nam) .hdr .mcls:hover {
+		opacity: 0.9;
+	}
+	.sdbrr-$(nam) .bdy {
+		font-size: $fsz-ctrl;
+		font-family: $fnt-txt;
+		border-top: 1px solid $(clr-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+		display: flex;
+		flex-direction: column;
+	}
+	.sdbrr-$(nam) #modal-toggle-r {
+		display: none;
+	}
+	.sdbrr-$(nam) #modal-toggle-r.active ~ .mbdrp,
+	.sdbrr-$(nam) #modal-toggle-r:checked ~ .mbdrp {
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 9;
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.2s ease-in;
+	}
+	.sdbrr-$(nam) #modal-toggle-r.active ~ .mcnt,
+	.sdbrr-$(nam) #modal-toggle-r:checked ~ .mcnt {
+		opacity: 1;
+		background-color: $(bg-$nam);
+		color: $(clr-$nam);
+		position: fixed;
+		right: 0;
+		top: 0;
+		width:30%;
+		height:100%;
+		margin-left: 5px;
+		margin-right: 0px;
+		z-index: 998;
+		pointer-events: auto;
+		cursor: auto;
+		visibility: visible;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+		overflow: hidden;
+	}
+}
+
+#mdl-cls {
+	display: none;
+}

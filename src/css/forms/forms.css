@@ -1,0 +1,337 @@
+@import '../globals/globals';
+
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+    .form-$nam {
+        background-color:$(bg-$(nam));
+        border:$brd-w $brd-stl $brd-clr;
+        border-radius: $brd-rad;
+        padding: $pad-ctrl;
+    }
+
+    /*text only*/
+    .form-$nam>.fctrl {
+        border:$brd-w $brd-stl $(clr-$(nam));
+        border-radius: $brd-rad;
+        padding: 5px;
+        margin:0px;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .form-$nam>.fctrl:hover {
+        box-shadow: inset 0px 10px 21px -17px rgba($(clr-$(nam)), 0.3);
+    }
+
+    .form-$nam>.fctrl>input[type='text'],
+    .form-$nam>.fctrl>input[type='password'],
+    .form-$nam>.fctrl>textarea {
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin:0px;
+        display: inline-block;
+        width:100%;
+        color:$(clr-$(nam));
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        font-size: $fsz-ctrl;
+        display:inline-block;
+        background-color: transparent;
+        border:none;
+        min-width:10px;
+    }
+    
+    
+
+
+    /*icons*/
+    .form-$nam>.fctrl-icn {
+        border:$brd-w $brd-stl $(clr-$(nam));
+        border-radius: $brd-rad;
+        padding: 5px;
+        margin:0px;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .form-$nam>.fctrl-icn:hover {
+        box-shadow: inset 0px 10px 21px -17px rgba($(clr-$(nam)), 0.3);
+    }
+
+    .form-$nam>.fctrl-icn>.icn1 {
+        display:inline-block;
+        color:$(clr-$(nam));
+        min-width:20px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .form-$nam>.fctrl-icn>input[type='text'],
+    .form-$nam>.fctrl-icn>input[type='password'] {
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin:0px;
+        display: inline-block;
+        width:calc(100%-26px);
+        color:$(clr-$(nam));
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        font-size: $fsz-ctrl;
+        display:inline-block;
+        background-color: transparent;
+        border:none;
+        min-width:10px;
+    }
+ 
+
+
+    
+    /*buttons*/
+    .form-$nam>.fctrl-btn {
+        border:$brd-w $brd-stl $(clr-$(nam));
+        border-radius: $brd-rad;
+        padding: 0px;
+        margin:0px;
+        overflow:hidden;
+        display: flex;
+        position:relative;
+    }
+
+    .form-$nam>.fctrl-btn>input[type='text'],
+    .form-$nam>.fctrl-btn>input[type='password'] {
+        padding: 5px;
+        display: inline-block;
+        width:100%;
+        color:$(clr-$(nam));
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        font-size: $fsz-ctrl;
+        background-color: transparent;
+        border:none;
+        margin:5px;
+        min-width:10px;
+    }
+
+    .form-$nam>.fctrl-btn>button
+    {
+        display:inline-block;
+        border: 0px;
+        border-left: 1px solid $(clr-$(nam));
+        font-weight:bold;
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color:$(clr-$(nam));
+        color:$(bg-$(nam));
+        font-size: $fsz-ctrl;
+        cursor: pointer;
+    }
+
+    .form-$nam>.fctrl-btn>button:first-child {
+        border-left: 0px;
+    }
+
+    .form-$nam>.fctrl-btn>.icn1 {
+        @extend .unselectable;
+        display:inline-block;
+        border: 0px;
+        border-left: 1px solid $(clr-$(nam));
+        font-weight:bold;
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color:$(clr-$(nam));
+        color:$(bg-$(nam));
+        font-size: $fsz-ctrl;
+        padding-left:5px;
+        padding-right:5px;
+        padding-top:11px;
+    }
+
+    .form-$nam>.fctrl-btn>.icn1:first-child {
+        border-left: 0px;
+    }
+
+    .form-$nam>.fctrl-btn>.icn1-only {
+        @extend .unselectable;
+        display:inline-block;
+        border: 0px;
+        font-weight:bold;
+        color:$(clr-$(nam));
+        font-size: $fsz-ctrl;
+        padding-left:5px;
+        padding-right:5px;
+        padding-top:11px;
+    }
+
+    .form-$nam>.fctrl-btn>.icn1-only:first-child {
+        border-left: 0px;
+    }
+
+    .form-$nam>.fctrl-btn:hover {
+        box-shadow: inset 0px 10px 21px -17px rgba($(clr-$(nam)), 0.3);
+    }
+
+    .form-$nam>.fctrl-btn>button:hover {
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 10%, rgba($(bg-$(nam)),0) 30%, rgba($(bg-$(nam)),0.8) 70%);
+        background-color:$(clr-$(nam));
+        color:$(bg-$(nam));
+    }
+
+    .form-$nam>.fctrl-btn>button:active {
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.8) 10%, rgba($(bg-$(nam)),0) 30%, rgba($(bg-$(nam)),0.1) 70%);
+        background-color:$(clr-$(nam));
+        color:$(bg-$(nam));
+    }
+
+
+
+
+
+    /*checkbox*/
+   .form-$nam>.fctrl-cb>.chkcls {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+    }
+
+    .form-$nam>.fctrl-cb>.txt {
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        background: #BBBBBB;
+        padding: 0.25em 0.5em 0.25em 2em;
+        border-radius: 1em;
+        min-width: 2em;
+        color: #FFF;
+        cursor: pointer;
+        transition: background-color 0.15s;
+    }
+
+    .form-$nam>.fctrl-cb>.txt:after {
+        content: ' ';
+        display: block;
+        background: #FFF;
+        width: 1.1em;
+        height: 1.1em;
+        border-radius: 1em;
+        position: absolute;
+        left: 0.3em;
+        top: 0.25em;
+        transition: left 0.15s, margin-left 0.15s;
+    }
+
+    .form-$nam>.fctrl-cb>.txt:before {
+        content: 'OFF';
+    }
+
+    .form-$nam>.fctrl-cb>.chkcls:checked ~ .txt {
+        background: $(clr-$(nam));
+        padding-left: 0.5em;
+        padding-right: 2em;
+    }
+      
+    .form-$nam>.fctrl-cb>.chkcls:checked ~ .txt:before {
+        content: 'ON';
+    }
+      
+    .form-$nam>.fctrl-cb>.chkcls:checked ~ .txt:after {
+        left: 100%;
+        margin-left: -1.4em;
+    }
+
+    .form-$nam>.fctrl-cb>.label {
+        color: $(clr-$(nam));
+    }
+
+
+
+
+
+    /*Radio*/
+    .form-$nam>.fctrl-rb {
+        /*padding-top: 25px;*/
+        /*padding-bottom: 15px;*/
+    }
+    .form-$nam>.fctrl-rb> input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+    }
+    .form-$nam>.fctrl-rb>.txt {
+        position: relative;
+        padding: 0 0 0 35px;
+        cursor: pointer;
+        color: $(clr-$(nam));
+        margin-top:5px;
+    }
+    .form-$nam>.fctrl-rb>.txt:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid #CDD1DA;
+        border-radius: 50%;
+        background: #FFF;
+    }
+    .form-$nam>.fctrl-rb>.txt:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $(clr-$(nam));
+        box-shadow: inset 0 1px 1px rgba($(clr-$(nam)),.1);
+        opacity: 0;
+        transition: .2s;
+    }
+    .form-$nam>.fctrl-rb input:checked + .txt:after {
+        opacity: 1;
+    }
+    .form-$nam>.fctrl-rb input:focus + .txt:before {
+        box-shadow: 0 0 0 3px rgba($(clr-$(nam)),.2);
+    }
+ 
+    
+
+
+
+    /*File upload*/
+    .fctrl-fl {
+        position: relative;
+        overflow: hidden;
+        width: 20%;
+        height: 20px;
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 10%, rgba($(bg-$(nam)),0) 30%, rgba($(bg-$(nam)),0.9) 90%);
+        background-color: $(clr-$(nam));
+        border-radius: 3px;
+        padding: 8px 4px;
+        color: $(bg-$(nam));
+        text-align: center;
+        font-weight:bold;
+        font-size: $fsz-ctrl;
+        border:1px solid transparent;
+    }
+    .fctrl-fl:hover {
+        background: $(clr-$(nam));
+    }
+    .fctrl-fl input[type="file"] {
+        display: none;
+    }
+    .fctrl-fl label {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .fctrl-fl span {
+        line-height: 36px;
+    }
+}
+

@@ -1,0 +1,55 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+	.active-$(nam) {
+		color:$(bg-$nam) !important;
+		background-color:$(clr-$nam) !important;
+	}
+
+	.list-$nam .icn1,
+	.list-$nam .icn2,
+	.list-$nam .icn3 {
+		margin-right: $mar-lr;
+	}
+
+    .list-$nam {
+		display: flex;
+		flex-direction: column;
+		min-width: 100%;
+	}
+	
+	.list-$nam a {
+		text-decoration: none;
+	}
+
+    .list-$nam>div {
+		position:relative;
+	}
+
+    .list-$nam>div>a {
+		display: flex;
+        color:$(clr-$(nam));
+        background-color:$(bg-$(nam));
+        border:$brd-w $brd-stl $brd-clr;
+        margin:$mar-ctrl;
+		white-space: nowrap;
+		cursor: pointer;
+		padding: 5px;
+	}
+	
+	.list-$nam a:after {
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+	}
+
+	.list-$nam a:hover:after {
+		background-color:$(clr-$nam);
+		opacity:0.25;
+		border-color: transparent;
+	}
+
+}

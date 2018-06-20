@@ -1,0 +1,95 @@
+@import '../globals/globals';
+
+.sldr {
+    width: 490px;
+    position: relative;
+    border: 1px solid #CCC;
+    overflow: hidden;
+}
+
+
+.sldr>.sld {
+    text-align:center;
+}
+
+.sldr>.sld>img {
+    max-width: 490px;
+    width: auto;
+    height: 200px;
+}
+
+
+.sldr>.scrl {
+    background-color: rgba(#CCC, 0.4);
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: margin 0.5s;
+    z-index: 1;
+}
+
+.sldr>.scrl>.hldr {
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    height: 90px;
+    padding: 0px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.sldr>.scrl>.hldr>img {
+    position: absolute;
+    left:0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.sldr>.scrl>.hldr>img:hover {
+    cursor: pointer;
+}
+
+.sldr>.scrl>.hldr:last-child {
+    margin-right: 0px;
+}
+
+.sldr>.scrl>.hldr:after {
+    position: absolute;
+    content:'';
+    left:0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    color: #CCC;
+    opacity: 0;
+}
+
+.sldr>.scrl>.active:after {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content:'\f058';
+    left:25%;
+    top:25%;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: #CCC;
+    opacity: 0.9;
+    font-size: 36pt;
+}
+
+.sldr>.scrl>.hldr:hover:after {
+    opacity: 0.9;
+    font-family: 'FontAwesome';
+    content:'\f192';
+    font-size: 36pt;
+    left:25%;
+    top:25%;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    cursor: pointer;
+}

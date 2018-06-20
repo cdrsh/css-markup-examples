@@ -1,0 +1,66 @@
+@import '../globals/globals';
+
+.ico-pri {
+    content:"\f0a2";
+}
+.ico-sec {
+    content:"\f0a2";
+} 
+.ico-suc {
+    content:"\f058";
+} 
+.ico-dng {
+    content:"\f188";
+}
+.ico-wrn {
+    content:"\f1e2";
+}
+.ico-inf {
+    content:"\f0a3";
+}
+.ico-lgt {
+    content:"\f0e5";
+}
+.ico-drk {
+    content:"\f075";
+}
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+    .alert-$nam {
+        color:$(bg-$(nam));
+        background-color:$(clr-$(nam));
+        border:$brd-w $brd-stl $brd-clr;
+        border-radius: $brd-rad;
+        padding: 15px;
+        padding-left: 40px;
+        font-size: 14pt;
+        font-weight: bolder;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .alert-$nam>message:after {
+        background: linear-gradient(0deg, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.8) 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content:'';
+        opacity: 0.25;
+    }
+
+    .alert-$nam>message:before {
+        @extend .ico-$(nam);
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        font-family: FontAwesome, Arial;
+        /*content:"\f046";*/
+        color:$(bg-$(nam));
+        margin-top: -10px;
+        font-size:16pt;
+    }
+}

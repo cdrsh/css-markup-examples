@@ -1,0 +1,496 @@
+@import '../globals/globals';
+
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+
+	.mdl-$nam:before
+	{
+		content: "";
+		display: none;
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		margin:0px;
+		padding:0px;
+	}
+	.mdl-$nam:target:before
+	{
+		display: block;
+	}	
+	.mdl-$nam:target .mdl-dlg
+	{
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+		top: 20%;
+	}
+	@media (max-width: 575.98px) {
+		.mdl-$nam>.mdl-dlg {
+			background-color: $(bg-$nam);
+			border: 1px solid $(clr-$nam);
+			border-radius: 5px;
+			position: fixed;
+			top: -100%;
+			z-index: 11;
+			left: 10px;
+			right:10px;
+			transform: translate(0, -500%);
+			-webkit-transform: translate(0, -500%);
+			-ms-transform: translate(0, -500%);
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			-moz-transition: -moz-transform 0.3s ease-out;
+			-o-transition: -o-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+		}
+	}
+	@media (min-width: 576px) and (max-width: 767.98px)  {
+		.mdl-$nam>.mdl-dlg {
+			background-color: $(bg-$nam);
+			border: 1px solid $(clr-$nam);
+			border-radius: 5px;
+			position: fixed;
+			top: -100%;
+			z-index: 11;
+			left: 10px;
+			right:10px;
+			transform: translate(0, -500%);
+			-webkit-transform: translate(0, -500%);
+			-ms-transform: translate(0, -500%);
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			-moz-transition: -moz-transform 0.3s ease-out;
+			-o-transition: -o-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		.mdl-$nam>.mdl-dlg {
+			background-color: $(bg-$nam);
+			border: 1px solid $(clr-$nam);
+			border-radius: 5px;
+			position: fixed;
+			top: -100%;
+			z-index: 11;
+			left: 15%;
+			width:70%;
+			transform: translate(0, -500%);
+			-webkit-transform: translate(0, -500%);
+			-ms-transform: translate(0, -500%);
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			-moz-transition: -moz-transform 0.3s ease-out;
+			-o-transition: -o-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+		}
+	}
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		.mdl-$nam>.mdl-dlg {
+			background-color: $(bg-$nam);
+			border: 1px solid $(clr-$nam);
+			border-radius: 5px;
+			position: fixed;
+			top: -100%;
+			z-index: 11;
+			left: 20%;
+			width:60%;
+			transform: translate(0, -500%);
+			-webkit-transform: translate(0, -500%);
+			-ms-transform: translate(0, -500%);
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			-moz-transition: -moz-transform 0.3s ease-out;
+			-o-transition: -o-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+		}
+	}
+	@media (min-width: 1200px) {
+		.mdl-$nam>.mdl-dlg {
+			background-color: $(bg-$nam);
+			border: 1px solid $(clr-$nam);
+			border-radius: 5px;
+			position: fixed;
+			top: -100%;
+			z-index: 11;
+			left: 25%;
+			width:50%;
+			transform: translate(0, -500%);
+			-webkit-transform: translate(0, -500%);
+			-ms-transform: translate(0, -500%);
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			-moz-transition: -moz-transform 0.3s ease-out;
+			-o-transition: -o-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+		}
+	}
+	.mdl-$nam>.ef1 {
+		transform: translate(0, -500%);
+		-webkit-transform: translate(0, -500%);
+		-ms-transform: translate(0, -500%);
+	}
+	.mdl-$nam>.ef2 {
+		transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		-ms-transform: scaleX(-1);
+	}
+	.mdl-$nam>.ef3 {
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+	}
+	.mdl-$nam>.ef4 {
+		transform: scale(2, 0.1);
+		-webkit-transform: scale(2, 0.1);
+		-ms-transform: scale(2, 0.1);
+	}
+	.mdl-$nam .mdl-bdy {
+		padding: 20px;
+		color: $(clr-$nam);
+		border-top: 1px solid $(clr-$nam);
+		display:flex;
+		flex-direction:column;
+	}
+	.mdl-$nam .mdl-hdr {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.mdl-$nam .mdl-hdr h2 {
+		flex-grow: 1;
+		font-size: 20px;
+		color: $(clr-$nam);
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.mdl-$nam .mdl-hdr>a {
+		width: 30px;
+		text-decoration: none;
+		text-align: center;
+		font-family: $fnt-txt;
+		font-size: 18pt;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+	}
+	.mdl-$nam .mdl-hdr>a:hover {
+		background-color:rgba($(clr-$nam),0.9);
+	}
+	.mdl-$nam .mdl-ftr {
+		padding: 10px 30px;
+		overflow: hidden;
+		border-top: 1px solid $(clr-$nam);
+		text-align: right;
+	}
+	.mdl-$nam .mdl-ftr>a {
+		text-decoration: none;
+		color: $(bg-$nam);
+		background-color: $(clr-$nam);
+		padding: 5px 10px 5px 10px;
+		border-radius: $brd-rad;
+	}
+	.mdl-$nam .mdl-ftr>a:hover {
+		color: $(clr-$nam);
+		text-decoration: none;
+		color: $(bg-$nam);
+		background-color:rgba($(clr-$nam),0.9);
+		padding: 5px 10px 5px 10px;
+		border-radius: $brd-rad;
+	}
+
+
+
+
+	
+
+
+
+
+	/*Modal label*/
+	.mdlc-$(nam) {
+		position: relative;
+	}
+	.mdlc-$(nam) .mbtn {
+		font-family: $fnt-txt;
+		font-size: $fsz-ctrl;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+		padding: 5px 15px 5px 15px;
+		border-radius: $brd-rad;
+		display: inline-block;
+	}
+	.mdlc-$(nam) .mbtn:hover {
+		opacity: 0.9;
+	}
+	.mdlc-$(nam) .mcnt {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		cursor: pointer;
+		display:flex;
+		flex-direction: column;	
+		border: 1px solid $(clr-$nam);
+		border-radius: $brd-rad;
+	}
+	.mdlc-$(nam) .hdr {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.mdlc-$(nam) .hdr .h2 {
+		flex-grow: 1;
+		color:$(clr-$nam);
+		font-size: 20pt;
+		font-family: $fnt-txt;
+		display: inline;
+		padding: 0px 15px 0px 15px;
+	}
+	.mdlc-$(nam) .hdr .mcls {
+		width: 30px;
+		text-align: center;
+		font-family: $fnt-txt;
+		font-size: 20pt;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+	}
+	.mdlc-$(nam) .hdr .mcls:hover {
+		opacity: 0.9;
+	}
+	.mdlc-$(nam) .bdy {
+		padding: 0px 15px 0px 15px;
+		font-size: $fsz-ctrl;
+		font-family: $fnt-txt;
+		border-top: 1px solid $(clr-$nam);
+		border-bottom: 1px solid $(clr-$nam);
+	}
+	.mdlc-$(nam) .ftr {
+		padding: 15px;
+		padding-right: 30px;
+		font-size: $fsz-ctrl;
+		font-family: $fnt-txt;
+		text-align: right;
+	}
+	.mdlc-$(nam) .ftr .btn{
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		padding: 5px 15px 5px 15px;
+		border-radius: $brd-rad;
+		margin-left: 10px;
+	}
+	.mdlc-$(nam) .ftr .btn:hover{
+		opacity: 0.9;
+	}
+	.mdlc-$(nam) #modal-toggle {
+		display: none;
+	}
+	.mdlc-$(nam) #modal-toggle.active ~ .mbdrp,
+	.mdlc-$(nam) #modal-toggle:checked ~ .mbdrp {
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 9;
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.2s ease-in;
+	}
+	@media (max-width: 767.98px) {
+		.mdlc-$(nam) #modal-toggle.active ~ .mcnt,
+		.mdlc-$(nam) #modal-toggle:checked ~ .mcnt {
+			opacity: 1;
+			background-color: $(bg-$nam);
+			color: $(clr-$nam);
+			max-height:90%;
+			position: fixed;
+			left:0;
+			width:calc(100%-15px);
+			margin-left: 5px;
+			margin-right: 5px;
+			top: 10%;
+			border-radius: 4px;
+			z-index: 999;
+			pointer-events: auto;
+			cursor: auto;
+			visibility: visible;
+			box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+			overflow: hidden;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		.mdlc-$(nam) #modal-toggle.active ~ .mcnt,
+		.mdlc-$(nam) #modal-toggle:checked ~ .mcnt {
+			opacity: 1;
+			background-color: $(bg-$nam);
+			color: $(clr-$nam);
+			max-height:90%;
+			position: fixed;
+			left:0;
+			width:80%;
+			margin-left: 10%;
+			top: 10%;
+			border-radius: 4px;
+			z-index: 999;
+			pointer-events: auto;
+			cursor: auto;
+			visibility: visible;
+			box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+			overflow: hidden;
+		}
+	}
+	@media (min-width: 1200px) {
+		.mdlc-$(nam) #modal-toggle.active ~ .mcnt,
+		.mdlc-$(nam) #modal-toggle:checked ~ .mcnt {
+			opacity: 1;
+			background-color: $(bg-$nam);
+			color: $(clr-$nam);
+			max-height:90%;
+			position: fixed;
+			left:0;
+			width:60%;
+			margin-left: 20%;
+			top: 10%;
+			border-radius: 4px;
+			z-index: 999;
+			pointer-events: auto;
+			cursor: auto;
+			visibility: visible;
+			box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+			overflow: hidden;
+		}
+	}	
+
+
+
+
+
+
+
+
+
+	/*Modal gallery*/
+	.gal-mdlc-$(nam) {
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		height: 0px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 9;
+		visibility: visible;
+		background-color:$(bg-$(nam));
+		opacity: 0;
+		-webkit-transition: opacity .5s ease-in-out,height .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out,height .5s ease-in-out;
+		-ms-transition: opacity .5s ease-in-out,height .5s ease-in-out;
+		-o-transition: opacity .5s ease-in-out,height .5s ease-in-out;
+		transition: opacity .5s ease-in-out,height .5s ease-in-out;
+	}
+	.gal-mdlc-$(nam)>.mcnt {
+		background-color:$(bg-$(nam));
+		color: blue;
+		display: flex;
+		flex-direction: column;
+		z-index: 999;
+		visibility: visible;
+		pointer-events: auto;
+		cursor: auto;
+		overflow: hidden;
+	}
+	.gal-mdlc-$(nam)>.mcnt>.bdy {
+		height:calc(100vh-70px);
+		width:100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content:center;
+	}
+	.gal-mdlc-$(nam)>.mcnt>.bdy>img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.gal-mdlc-$(nam) .hdr {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		overflow: hidden;
+		height: 30px;
+		border-bottom: 1px solid $(clr-$(nam));
+	}
+	.gal-mdlc-$(nam) .hdr .h2 {
+		flex-grow: 1;
+		color:$(clr-$nam);
+		font-size: 20pt;
+		font-family: $fnt-txt;
+		display: inline;
+		padding: 0px 15px 0px 15px;
+		text-align:center;
+	}
+	.gal-mdlc-$(nam) .hdr .mcls {
+		width: 30px;
+		text-align: center;
+		font-family: $fnt-txt;
+		font-size: 20pt;
+		color: $(bg-$nam);
+		background-color:$(clr-$nam);
+		border-left: 1px solid $(clr-$nam);
+		font-weight: bolder;
+		cursor: pointer;
+	}
+	.gal-mdlc-$(nam) .hdr .mcls:hover {
+		opacity: 0.9;
+	}
+	.gal-mdlc-$(nam) .ftr {
+		border-top: 1px solid $(clr-$(nam));
+		height: 40px;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align:center;
+	}
+	.gal-mdlc-$(nam) .ftr .btn{
+		border: 1px solid $(clr-$(nam));
+		border-radius: 5px;
+		margin: 5px;
+		padding: 5px;
+		color: $(bg-$nam);
+		background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+		background-color:$(clr-$(nam));
+	}
+	.gal-mdlc-$(nam) .ftr .btn:hover{
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 30%, rgba($(bg-$(nam)),0.8) 70%);
+        background-color:$(clr-$(nam));
+		cursor: pointer;
+	}
+	.gal-mdlc-$(nam) .ftr .prv,
+	.gal-mdlc-$(nam) .ftr .nxt {
+		@extend .icn-fa;
+        width: 50px;
+		cursor: pointer;
+	}
+
+}
+
+#mdl-cls {
+	display: none;
+}

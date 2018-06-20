@@ -1,0 +1,57 @@
+@import '../globals/globals';
+
+@each $sz in (50,100,150,200,250,300) {
+    .gal-h$sz,
+    .gal-w$sz,
+    .gal-$sz {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .gal-h$sz>span,
+    .gal-w$sz>span,
+    .gal-$sz>span {
+        display: block;
+        width:$(sz)px;
+        height:$(sz)px;
+        border: 3px double #CCCCCC;
+        border-radius: 5px;
+        margin: 15px;
+        overflow:hidden;
+        text-align:center;
+    }
+
+    .gal-h$sz>span>img {
+        display: inline;
+        height: calc($(sz)-20)px;
+        width: auto;
+        max-width: calc($(sz)-20)px;
+        padding: 5px;
+        margin: 5px;
+    }
+  
+    .gal-w$sz>span>img {
+        display: inline;
+        height: auto;
+        width: calc($(sz)-20)px;
+        max-width: calc($(sz)-20)px;
+        max-height: calc($(sz)-20)px;
+        padding: 5px;
+        margin: 5px;
+    }
+ 
+    .gal-$sz>span>img {
+        display: inline;
+        height: calc($(sz)-20)px;
+        width: calc($(sz)-20)px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    @each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+        .modal-gal-$(nam)>span>img {
+            cursor:pointer;
+        }
+    }
+}

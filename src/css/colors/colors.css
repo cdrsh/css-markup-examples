@@ -1,0 +1,33 @@
+@import '../globals/globals';
+
+.clr-pri {
+    color: $clr-pri;
+}
+
+.clr-sec {
+    color: $clr-sec;
+}
+
+.clr-suc {
+    color: $clr-suc;
+}
+
+.clr-dng {
+    color: $clr-dng;
+}
+
+.clr-wrn {
+    color: $clr-wrn;
+}
+
+.clr-inf {
+    color: $clr-inf;
+}
+
+.clr-lgt {
+    color: $clr-lgt;
+}
+
+.clr-drk {
+    color: $clr-drk;
+}

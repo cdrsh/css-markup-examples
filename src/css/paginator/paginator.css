@@ -1,0 +1,119 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+
+    .pg-$(nam) {
+        padding: 5px;
+        display:block;
+        color: $(clr-$(nam));
+    }
+
+    .pg-$(nam)>span {
+        padding: 5px;
+        cursor:pointer;
+        word-wrap: none;
+        display: inline-block;
+        color: $(bg-$(nam));
+		background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        width: 20px;
+        text-align: center; 
+    }
+
+    .pg-$(nam)>span>a {
+        text-decoration: none;
+        color: $(bg-$(nam));
+        background-color: transparent;
+    }
+
+    .pg-$(nam)>span:hover {
+        background:none;
+        background-color: $(clr-$(nam));
+        color:$(bg-$(nam));
+    }
+
+    .pg-$(nam)>span:hover>a {
+        background:none;
+        background-color: $(clr-$(nam));
+        color:$(bg-$(nam));
+    }
+    
+    .pg-$(nam)>.active {
+        font-weight: bold;
+        background:none;
+        background-color: rgba($(clr-$(nam)),0.3);
+        color:$(clr-$(nam));
+    }
+
+    .pg-$(nam)>.active>a {
+        color:$(clr-$(nam));
+    }
+
+
+    .pg-$(nam)>.pg-first,
+    .pg-$(nam)>.pg-end,
+    .pg-$(nam)>.pg-nxt,
+    .pg-$(nam)>.pg-prv
+    {
+        @extend .icn-fa;
+        padding: 5px;
+        cursor:pointer;
+        display: inline-block;
+        color: $(bg-$(nam));
+		background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        width: 20px;
+        text-align: center; 
+    }
+
+    /*find button*/
+    .pg-$(nam) .pg-find {
+        display: inline-block;
+        flex-direction: row;
+        min-width: 80px;
+        max-width: 80px;
+        border: 0px;
+    }
+    .pg-$(nam) .pg-find>input {
+        width:50px;
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: -5px;
+        border: 0px;
+        background-color: $(bg-$(nam));
+        border: 1px solid $(clr-$(nam));
+        border-radius: 5px;
+        color: $(clr-$(nam));
+    }
+    .pg-$(nam) .pg-find>span {
+        width: 20px;
+        display:inline-block;
+        position: relative;
+    }
+    .pg-$(nam) .pg-find>span>a {
+        display:inline-block;
+        text-decoration: none;
+        margin: -5px;
+        margin-left: 5px;
+        padding: 5px;
+        color: $(clr-$(nam));
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color: $(bg-$(nam));
+        border-radius: 5px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border: 1px solid $(clr-$(nam));
+    }
+    .pg-$(nam) .pg-find>span>a:hover {
+        background-color: $(clr-$(nam));
+        color: $(bg-$(nam));
+    }
+
+    .pg-$(nam) .pg-find>span>a:active {
+        background:none;
+        background-color: $(clr-$(nam));
+    }
+}
+

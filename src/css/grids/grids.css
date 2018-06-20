@@ -1,0 +1,302 @@
+.flx {
+	display:flex;
+	/*height:100%;*/
+}
+
+.flx-wrp {
+	display:flex;
+	flex-wrap: wrap;
+	/*height:100%;*/
+}
+
+
+.pr { 
+	@extend .flx;
+	flex-direction: row;
+}
+
+.prr { 
+	@extend .flx;
+	flex-direction: row-reverse;
+}
+
+.pc { 
+	@extend .flx;
+	flex-direction: column;
+}
+
+.pcr { 
+	@extend .flx;
+	flex-direction: column-reverse;
+}
+
+.pr-wrp { 
+	@extend .flx-wrp;
+	flex-direction: row;
+}
+
+.prr-wrp { 
+	@extend .flx-wrp;
+	flex-direction: row-reverse;
+}
+
+.pc-wrp { 
+	@extend .flx-wrp;
+	flex-direction: column;
+}
+
+.pcr-wrp { 
+	@extend .flx-wrp;
+	flex-direction: column-reverse;
+}
+
+
+
+/*12 колонок*/
+@for $i from 1 to 12 {
+	.cl$i { 
+		flex: $i;
+		display: flex;
+		/*padding: 10px;*/
+		/*height:100px;*/
+		/*border: 1px solid blue;*/
+	}
+}
+
+.hid {
+	display: none;
+}
+
+.vis {
+	display: flex;
+}
+
+/* XS */
+@media (max-width: 575.98px)
+{
+	$dev:-xs;
+	/*12 колонок*/
+	@for $i from 1 to 12 {
+		.cl$(i)$dev { 
+			flex: $i;
+			display: flex;
+		}
+	}
+
+	.hid$dev {
+		display:none;
+	}
+
+	.vis$dev {
+		display:flex;
+	}
+}
+
+/* SM */
+@media (min-width: 576px) and (max-width: 767.98px)  
+{
+	$dev:-sm;
+	/*12 колонок*/
+	@for $i from 1 to 12 {
+		.cl$(i)$dev { 
+			flex: $i;
+			display: flex;			
+		}
+	}
+
+	.hid$dev {
+		display:none;
+	}
+
+	.vis$dev {
+		display:flex;
+	}
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+	$dev:-md;
+	/*12 колонок*/
+	@for $i from 1 to 12 {
+		.cl$(i)$dev { 
+			flex: $i;
+			display: flex;			
+		}
+	}
+
+	.hid$dev {
+		display:none;
+	}
+
+	.vis$dev {
+		display:flex;
+	}
+
+}
+
+/*LG*/
+@media (min-width: 992px) and (max-width: 1199.98px)
+{
+	$dev:-lg;
+	/*12 колонок*/
+	@for $i from 1 to 12 {
+		.cl$(i)$dev { 
+			flex: $i;
+			display: flex;			
+		}
+	}
+
+	.hid$dev {
+		display:none;
+	}
+
+	.vis$dev {
+		display:flex;
+	}
+}
+
+/* XL */
+@media (min-width: 1200px)
+{
+	$dev:-xl;
+	/*12 колонок*/
+	@for $i from 1 to 12 {
+		.cl$(i)$dev { 
+			flex: $i;
+			display: flex;			
+		}
+	}
+
+	.hid$dev {
+		display:none;
+	}
+
+	.vis$dev {
+		display:flex;
+	}
+}
+
+
+
+/*Выравнивание контента внтури ячеек со свойством display:flex*/
+/*a-align lcr-left/right/center tcb-top/center/bottom пример (alt-по левому верхнему краю)*/
+/*По центру вертиально и горизонтально*/
+.ac {
+	/*Главная ось*/
+	justify-content: center;
+	/*Поперечная ось*/
+	align-items:center;
+}
+/*По левому горизонтально*/
+.al {
+	/*Главная ось*/
+	justify-content: flex-start;
+}
+/*По правому горизонтально*/
+.ar {
+	/*Главная ось*/
+	justify-content: flex-end;
+}
+
+
+
+/*По левому горизонтально По верхнему горизонтально*/
+.alt {
+	/*Главная ось*/
+	justify-content: flex-start;
+	/*Поперечная ось*/
+	align-items:flex-start;
+}
+/*По левому горизонтально По центру горизонтально*/
+.alc {
+	/*Главная ось*/
+	justify-content: flex-start;
+	/*Поперечная ось*/
+	align-items:center;
+}
+/*По левому горизонтально По нижнему горизонтально*/
+.alb {
+	/*Главная ось*/
+	justify-content: flex-start;
+	/*Поперечная ось*/
+	align-items:flex-end;
+}
+
+
+
+/*По левому горизонтально По верхнему горизонтально*/
+.act {
+	/*Главная ось*/
+	justify-content: center;
+	/*Поперечная ось*/
+	align-items:flex-start;
+}
+/*По левому горизонтально По центру горизонтально*/
+.acc {
+	/*Главная ось*/
+	justify-content: center;
+	/*Поперечная ось*/
+	align-items:center;
+}
+/*По левому горизонтально По нижнему горизонтально*/
+.acb {
+	/*Главная ось*/
+	justify-content: center;
+	/*Поперечная ось*/
+	align-items:flex-end;
+}
+
+
+
+
+
+/*По правому горизонтально По верхнему горизонтально*/
+.art {
+	/*Главная ось*/
+	justify-content: flex-end;
+	/*Поперечная ось*/
+	align-items:flex-start;
+}
+/*По правому горизонтально По центру горизонтально*/
+.arc {
+	/*Главная ось*/
+	justify-content: flex-end;
+	/*Поперечная ось*/
+	align-items:center;
+}
+/*По правому горизонтально По нижнему горизонтально*/
+.arb {
+	/*Главная ось*/
+	justify-content: flex-end;
+	/*Поперечная ось*/
+	align-items:flex-end;
+}
+
+
+
+/*Равные промежутки между колонками вертикально*/
+.a-spc-in {
+	/*Главная ось*/
+	justify-content: space-between;
+}
+
+/*Равные промежутки между колонками и снаружи вертикально*/
+.a-spc-out {
+	/*Главная ось*/
+	justify-content: space-around;
+}
+
+
+
+/*По нижней линии текстов горизонтально*/
+.a-vbas {
+	/*Главная ось*/
+	align-items: baseline;
+}
+
+/*Растянуть вертикально*/
+.a-vstr {
+	/*Главная ось*/
+	align-items: stretch;
+}

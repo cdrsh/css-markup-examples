@@ -1,0 +1,79 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+
+    .bdgl-$(nam) {
+        display: inline-block;
+        padding: 10px;
+        color: $(bg-$(nam));
+        background: linear-gradient(0deg, rgba($(clr-$(nam)),0.1) 20%, rgba($(clr-$(nam)),0) 40%, rgba($(clr-$(nam)),0.8) 100%);
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        position: relative;
+        font-size:14pt;
+    }
+    .bdgl-$(nam)>.nmbr {
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+
+    .bdgr-$(nam) {
+        display: inline-block;
+        padding: 10px;
+        color: $(bg-$(nam));
+        background: linear-gradient(0deg, rgba($(clr-$(nam)),0.1) 20%, rgba($(clr-$(nam)),0) 40%, rgba($(clr-$(nam)),0.8) 100%);
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        position: relative;
+        font-size:14pt;
+    }
+    .bdgr-$(nam)>.nmbr {
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+
+    .bdgl-inv-$(nam) {
+        display: inline-block;
+        padding: 10px;
+        color: $(clr-$(nam));
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color: $(bg-$(nam));
+        border-radius: 5px;
+        position: relative;
+        font-size:14pt;
+    }
+    .bdgl-inv-$(nam)>.nmbr {
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+
+    .bdgr-inv-$(nam) {
+        display: inline-block;
+        padding: 10px;
+        color: $(clr-$(nam));
+        background: linear-gradient(0deg, rgba($(bg-$(nam)),0.1) 20%, rgba($(bg-$(nam)),0) 40%, rgba($(bg-$(nam)),0.8) 100%);
+        background-color: $(bg-$(nam));
+        border-radius: 5px;
+        position: relative;
+        font-size:14pt;
+    }
+    .bdgr-inv-$(nam)>.nmbr {
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,65 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc,dng,wrn,inf,lgt,drk) {
+    .checked-$(nam)l {
+        @extend .unselectable;
+        color:$(clr-$(nam));
+        padding: 5px;
+        cursor: pointer;
+    }
+    .unchecked-$(nam)l {
+        @extend .unselectable;
+        color:$(clr-$(nam));
+        padding: 5px;
+        cursor: pointer;
+    }
+    .checked-$(nam)l:before {
+        font-family: FontAwesome, Arial;
+        content:"\f046";
+        color:$(clr-$(nam));
+        cursor: pointer;
+        padding-right: 5px;
+        width: 15px;
+        display: inline-block;
+    }
+    .unchecked-$(nam)l:before {
+        font-family: FontAwesome, Arial;
+        content:"\f096";
+        color:$(clr-$(nam));
+        cursor: pointer;
+        padding-right: 5px;
+        width: 15px;
+        display: inline-block;
+    }
+
+    .checked-$(nam)r {
+        @extend .unselectable;
+        color:$(clr-$(nam));
+        padding: 5px;
+        cursor: pointer;
+    }
+    .unchecked-$(nam)r {
+        @extend .unselectable;
+        color:$(clr-$(nam));
+        padding: 5px;
+        cursor: pointer;
+    }
+    .checked-$(nam)r:after {
+        font-family: FontAwesome, Arial;
+        content:"\f046";
+        color:$(clr-$(nam));
+        cursor: pointer;
+        padding-left: 5px;
+        width: 15px;
+        display: inline-block;
+    }
+    .unchecked-$(nam)r:after {
+        font-family: FontAwesome, Arial;
+        content:"\f096";
+        color:$(clr-$(nam));
+        cursor: pointer;
+        padding-left: 5px;
+        width: 15px;
+        display: inline-block;
+    }
+}

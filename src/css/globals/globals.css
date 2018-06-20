@@ -1,0 +1,113 @@
+/*Цвета*/
+
+$clr-txt: #777777;
+
+$clr-pri: #39AECF;
+$clr-sec: #61B7CF;
+$clr-suc: #00B945;
+$clr-dng: #FF4040;
+$clr-wrn: #FFB573;
+$clr-inf: #B4FCFF;
+$clr-lgt: #B0FFF9;
+$clr-drk: #39A69E;
+
+/*Фон*/
+$bg-pri: #FFFFFF;
+$bg-sec: #D4FFFC;
+$bg-suc: #FFDEB0;
+$bg-dng: #FFD6B3;
+$bg-wrn: #2e3783;
+$bg-inf: #0192A6;
+$bg-lgt: #39A69F;
+$bg-drk: #B0FFF8;
+
+/*Размеры*/
+$sz-xs: 10pt;
+$sz-sm: 12pt;
+$sz-md: 14pt;
+$sz-lg: 16pt;
+
+/*Рамки*/
+$brd-w:1px;
+$brd-stl:solid;
+$brd-clr:rgba(204, 204, 204, 0.5);
+/*$brd-clr:transparent;*/
+$brd-rad:5px;
+$brd-trnsp:0.5;
+
+/*Отступы*/
+$pad-all: 15px;
+$mar-lr: 5px;
+$pad-ctrl: 5px 10px 5px 10px;
+$mar-all:0px;
+$mar-ctrl:0px;
+$pad-ctrl: 15px;
+
+/*Наведение*/
+$brd-clr-hvr:rgba(150, 150, 150, 1);
+
+/*Шрифты*/
+$fnt-ctrl:RobotoCondensed, Caveat, Arial, Sans-serif;
+$fnt-txt:RobotoCondensed, Arial, Sans-serif;
+
+/*Заголовки*/
+.h1,.h2,.h3,.h4,.h5,.h6,div,span,.HDR {
+	font-family: $fnt-txt;
+}
+
+/*Размеры заголовков*/
+.h1, .HDR {
+    font-size:18pt;
+    color:$clr-txt;
+}
+.h2 {
+    font-size:16pt;
+    color:$clr-txt;
+}
+.h3 {
+    font-size:14pt;
+    color:$clr-txt;
+}
+.h4, .SUBHDR {
+    color:$clr-txt;
+    font-size:13pt;
+}
+.h5 {
+    color:$clr-txt;
+    font-size:12pt;
+}
+.h6 {
+    color:$clr-txt;
+    font-size:11pt;
+}
+html, body, .cnt {
+    color:$clr-txt;
+    font-size:13pt;
+}
+
+/*Контролы*/
+$brd-active-w:2px;
+$brd-active-stl:solid;
+
+input,button,textarea {
+	font-family: $fnt-ctrl;
+}
+
+$fsz-ctrl:13pt;
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline:none;
+    outline-offset: 0;
+    box-shadow: none; 
+}
+
+.icn-fa {
+    font-family: FontAwesome, Arial;
+}
+

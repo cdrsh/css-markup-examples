@@ -1,0 +1,84 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+
+    .popupr-$(nam) {
+        display: inline-block;
+        position: relative;
+        padding: 5px;
+    }
+
+    .popupr-$(nam)>.popup {
+        display: none;
+    }
+
+    .popupr-$(nam)>.popup:before {
+        position: absolute;
+        left:-15px;
+        top:0;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 20px 10px 0;
+        content:'';
+        border-color: transparent $(clr-$(nam)) transparent transparent;
+    }
+
+    .popupr-$(nam):hover>.popup {
+        display: inline;
+        padding: 10px;
+        position: absolute;
+        top:0;
+        left:100%;
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        margin-left: 15px;
+        margin-top: 5px;
+        z-index: 10;
+    }
+
+
+
+
+
+
+    .popupl-$(nam) {
+        display: inline-block;
+        position: relative;
+        padding: 5px;
+    }
+
+    .popupl-$(nam)>.popup {
+        display: none;
+    }
+
+    .popupl-$(nam)>.popup:before {
+        position: absolute;
+        /*right:calc(100%-15px);*/
+        left:calc(100%-5px);
+        top:0;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 0 10px 20px;
+        content:'';
+        border-color: transparent transparent transparent $(clr-$(nam));
+        margin-top: 5px;
+    }
+
+    .popupl-$(nam):hover>.popup {
+        display: inline;
+        padding: 10px;
+        position: absolute;
+        top:0;
+        right:100%;
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+        margin-right: 15px;
+        margin-top: 5px;
+        z-index: 10;
+    }
+}
+

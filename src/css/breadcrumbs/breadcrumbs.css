@@ -1,0 +1,158 @@
+@import '../globals/globals';
+
+@each $nam in (pri, sec, suc, dng, wrn, inf, lgt, drk) {
+
+    .brdcrmb-$(nam) {
+        padding: 5px;
+        display:block;
+        color: $(clr-$(nam));
+    }
+
+
+    .brdcrmb-$(nam)>span {
+        padding: 5px;
+        cursor:pointer;
+        word-wrap: none;
+        display: inline-block;
+    }
+
+    .brdcrmb-$(nam)>span:hover {
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        border-radius: 5px;
+    }
+
+    .brdcrmb-$(nam)>span:after {
+        @extend .icn-fa;
+        content:'\f0da';
+        width: 15px;
+        text-align:center;
+        margin-left: 5px;
+    }
+
+    .brdcrmb-$(nam)>span:hover>a {
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        word-wrap: none;
+    }
+
+    .brdcrmb-$(nam)>span>a {
+        text-decoration: none;
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+    }
+
+    .brdcrmb-$(nam)>.active {
+        border-bottom: 1px solid $(clr-$(nam));
+    }
+
+    .brdcrmb-$(nam)>span:last-child:after {
+        content:'';
+    }
+
+
+
+    /*Inverted color*/
+    .brdcrmb-inv-$(nam) {
+        padding: 5px;
+        display:block;
+        color: $(bg-$(nam));
+    }
+
+
+    .brdcrmb-inv-$(nam)>span {
+        padding: 5px;
+        cursor:pointer;
+        word-wrap: none;
+        display: inline-block;
+    }
+
+    .brdcrmb-inv-$(nam)>span:hover {
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+        border-radius: 5px;
+    }
+
+    .brdcrmb-inv-$(nam)>span:after {
+        @extend .icn-fa;
+        content:'\f0da';
+        width: 15px;
+        text-align:center;
+        margin-left: 2px;
+        color: $(clr-$(nam));
+    }
+
+    .brdcrmb-inv-$(nam)>span:hover>a {
+        color: $(clr-$(nam));
+        background-color: $(bg-$(nam));
+        word-wrap: none;
+    }
+
+    .brdcrmb-inv-$(nam)>span>a {
+        text-decoration: none;
+        color: $(bg-$(nam));
+        background-color: $(clr-$(nam));
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+
+    .brdcrmb-inv-$(nam)>.active {
+        font-weight: bolder;
+    }
+
+    .brdcrmb-inv-$(nam)>span:last-child:after {
+        content:'';
+    }
+}
+
+
+
+
+
+/*Simple breadcrumb*/
+.brdcrmb-smpl {
+    padding: 5px;
+    display:block;
+}
+
+.brdcrmb-smpl>span {
+    padding: 5px;
+    cursor:pointer;
+    word-wrap: none;
+    display: inline-block;
+}
+
+.brdcrmb-smpl>span:hover {
+    border-radius: 5px;
+}
+
+.brdcrmb-smpl>span:after {
+    @extend .icn-fa;
+    content:'\f0da';
+    width: 15px;
+    text-align:center;
+    margin-left: 5px;
+    color: #CCC;
+}
+
+.brdcrmb-smpl>span:hover>a {
+    word-wrap: none;
+}
+
+.brdcrmb-smpl>span>a:hover {
+    text-decoration: underline;
+}
+
+.brdcrmb-smpl>span>a {
+    text-decoration: none;
+}
+
+.brdcrmb-smpl>.active>a {
+    font-weight: bolder;
+}
+
+.brdcrmb-smpl>span:last-child:after {
+    content:'';
+}
+
